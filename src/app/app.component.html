@@ -26,11 +26,19 @@
 <h2>{{actorName}}</h2>
 
 <div *ngIf="actorFilms">
-  <div *ngFor="let film of actorFilms">
-    <div>
-      ({{film.release_date}})   {{film.title}} - {{film.vote_average}}
-    </div>
-  </div>
+  <table border="1">
+    <tr>
+      <th>Год выпуска фильма</th>
+      <th>Название фильма</th>
+      <th>Оценка фильма</th>
+    </tr>
+    <tr *ngFor="let film of actorFilms">
+
+      <td>({{film.release_date}}) </td>
+      <td>{{film.title}} </td>
+      <td>{{film.vote_average}}</td>
+    </tr>
+  </table>
 </div>
 
 
